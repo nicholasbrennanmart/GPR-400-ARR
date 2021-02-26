@@ -1,3 +1,4 @@
 # GPR-400-ARR
-Proposal for Project Milestone 1
-Read the pdf and slides
+Project Milestone 2
+Vulkan wrapper is a work in process that cannot be run yet
+Experimenting with GPU programming shows an example of programming on GPUgit

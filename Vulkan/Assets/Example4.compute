@@ -1,0 +1,48 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel Collision
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWTexture2D<float4> Result;
+
+//struct for position and color
+struct Test
+{
+
+    float3 position;
+    float4 color;
+};
+
+//put all data passed into one vecotr
+//RWStructuredBuffer<Test> sBuffer;
+
+//variables that are set are passed in
+//float4 white = (1, 1, 1, 1);
+float resolution;
+int main;
+float length;
+
+[numthreads(8,8,1)]
+void Collision (uint3 id : SV_DispatchThreadID)
+{
+    // TODO: insert actual code here!
+
+    //set x and y
+    float xPos = id.x / resolution;
+    float yPos = id.y / resolution;
+
+    //failed test to change color
+    //Test test = sBuffer[id.x];
+    //test.color = (xPos, 0.0, 0.0, 1.0);
+
+    /*if (test.position.x < 5) 
+    {
+
+        test.color = (0.0, 1.0, 0.0, 1.0);
+    }*/
+
+    //sBuffer[id.x] = test;
+
+    //return data
+    Result[id.xy] = float4(id.x & id.y, (id.x & 15)/15.0, (id.y & 15)/15.0, 0.0);
+}

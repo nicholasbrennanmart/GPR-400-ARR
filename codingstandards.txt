@@ -1,0 +1,6 @@
+Coding standards: 
+No visual programming interfaces
+Cannot use the 'auto' keyword
+Cannot use 'for-each' loop syntax
+Every section/block of code must be commented
+Raw points are forbidden
