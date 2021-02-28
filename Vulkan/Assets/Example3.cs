@@ -31,14 +31,6 @@ public class Example3 : MonoBehaviour
         //data[1].pos = cube2.transform.position;
         //data[0].color = cube2.GetComponent<Color>();
         //data[1].color = cube2.GetComponent<Color>();
-
-        //tex = new RenderTexture(256, 256, 24);
-        //tex.enableRandomWrite = true;
-        //tex.Create();
-
-        //shader.SetTexture(kernelHandle, "Result", tex);
-        //shader.SetFloat("Resolution", tex.width);
-        //shader.Dispatch(kernelHandle, 256 / 8, 256 / 8, 1);
     }
 
     // Update is called once per frame
