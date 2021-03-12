@@ -9,7 +9,7 @@ layout (binding = 0) buffer bPhysicsData
 	// contents of buffer
 };
 
-	primitive points that will be used for simulation
+	//primitive points that will be used for simulation
 
 	layout(points) in;
 	layout(GL_POINTS or points, max_vertices = MAX_VERTICES) out;
@@ -59,7 +59,7 @@ layout (binding = 0) buffer bPhysicsData
 	{
 	vColor = uPointColors[0];
 	vec3 newVelocity = CircleCircleCollision(uPointLocation, other uPointLocations, uPointSize, other uPointSize);
-	vec4 position = Lerp(uPointLocation, uPointLocation + uVelocity + vec4(newVelocity, 0.0f), sTime);
+	vec4 position = Lerp(uPointLocation, uPointLocation + uVelocity + newVelocity, sTime);
 	DrawPointAtLocation(position);
 	}
 	}
